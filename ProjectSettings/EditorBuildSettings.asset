@@ -13,3 +13,4 @@ EditorBuildSettings:
     guid: 8574b8ff5a6d742ce9bd4a5f2be77768
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ed355a77c27c44bee984323236e44b9f, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ca54e35c6b6624a3c9a7d1d3d56817f0, type: 2}
