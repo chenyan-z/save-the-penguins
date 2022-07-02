@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gallery.unity
     guid: 38cbade37dcf8439f91537925f03e2fc
   - enabled: 1
-    path: Assets/Scenes/Friends.unity
+    path: Assets/Scenes/Friend.unity
     guid: cfac9ced2365b4fa181007f6d3f43162
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 273001ced62a24407ae097dcf129a1f8, type: 2}
