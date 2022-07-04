@@ -1206,11 +1206,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 357659393}
   m_Direction: 0
   m_Value: 0
-<<<<<<< HEAD:Assets/myAssets/myScenes/GameMenu.unity
-  m_Size: 0.69696885
-=======
   m_Size: 0.41995117
->>>>>>> b38614cd751f35ed07bd4d1d54d108d1839b8e8b:Assets/Scenes/GameMenu.unity
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
