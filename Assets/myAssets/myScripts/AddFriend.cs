@@ -7,6 +7,7 @@ public class AddFriend : MonoBehaviour
     public void AddNewFriend(GameObject friendToCopy)
     {
       GameObject newFriend = GameObject.Instantiate(friendToCopy);
-      newFriend.transform.parent = friendToCopy.transform.parent; 
+      newFriend.transform.SetParent(friendToCopy.transform.parent, false);
+      newFriend.SetActive(true);
     }
 }
