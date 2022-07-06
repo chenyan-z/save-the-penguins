@@ -27,7 +27,7 @@
 .vs/
 
 # Desktop Services Store in Mac OS
-.DS_Store/
+.DS_Store
 
 # VisualStudio Configuration
 .vsconfig/
