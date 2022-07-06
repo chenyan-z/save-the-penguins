@@ -1,0 +1,15 @@
+{
+	"friends":
+	[
+		{"uid":10, "friendName":"Spy10", "picid":"10"},
+		{"uid":1, "friendName":"Spy1", "picid":"1"},
+		{"uid":2, "friendName":"Spy2", "picid":"2"},
+		{"uid":3, "friendName":"Spy3", "picid":"3"},
+		{"uid":4, "friendName":"Spy4", "picid":"4"},
+		{"uid":5, "friendName":"Spy5", "picid":"5"},
+		{"uid":6, "friendName":"Spy6", "picid":"6"},
+		{"uid":7, "friendName":"Spy7", "picid":"7"},
+		{"uid":8, "friendName":"Spy8", "picid":"8"},
+		{"uid":9, "friendName":"Spy9", "picid":"9"}
+	]
+}

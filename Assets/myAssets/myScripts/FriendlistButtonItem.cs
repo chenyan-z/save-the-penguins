@@ -8,13 +8,15 @@ public class FriendlistButtonItem : MonoBehaviour
 {
 
     [HideInInspector] public int friendIndex;
+    [HideInInspector] public string friendName;
+    [HideInInspector] public int friendPicId;
     [HideInInspector] public FriendlistController friendlistController;
 
     [SerializeField] TextMeshProUGUI friendNameText;
 
     private void Start()
     {
-        friendNameText.text = "Spy" + (friendIndex);
+        friendNameText.text = friendName;
     }
 
     public void OnFriendlistButtonClick()
