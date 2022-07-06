@@ -438,7 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c7dbbf2e61d844b2b5b14b4f73b1c9f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -717,6 +717,7 @@ MonoBehaviour:
   friendIndexText: {fileID: 304687769}
   friendlistBtnPref: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
   friendlistBtnParent: {fileID: 115277773}
+  friendProfileImage: {fileID: 194820896}
   jsonFile: {fileID: 4900000, guid: c806a81faebb04ab09a118bdd1e29c2c, type: 3}
 --- !u!1 &410676272
 GameObject:

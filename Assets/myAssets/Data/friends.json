@@ -1,7 +1,6 @@
 {
 	"friends":
 	[
-		{"uid":10, "friendName":"Spy10", "picid":"10"},
 		{"uid":1, "friendName":"Spy1", "picid":"1"},
 		{"uid":2, "friendName":"Spy2", "picid":"2"},
 		{"uid":3, "friendName":"Spy3", "picid":"3"},

@@ -9,7 +9,7 @@ public class FriendlistButtonItem : MonoBehaviour
 
     [HideInInspector] public int friendIndex;
     [HideInInspector] public string friendName;
-    [HideInInspector] public int friendPicId;
+    //[HideInInspector] public int friendPicId;
     [HideInInspector] public FriendlistController friendlistController;
 
     [SerializeField] TextMeshProUGUI friendNameText;

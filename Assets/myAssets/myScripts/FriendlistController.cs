@@ -11,8 +11,11 @@ public class FriendlistController : MonoBehaviour
     [SerializeField] TextMeshProUGUI friendIndexText;
     [SerializeField] GameObject friendlistBtnPref;
     [SerializeField] Transform friendlistBtnParent;
+    [SerializeField] Image friendProfileImage;
     public TextAsset jsonFile;
     private Dictionary<int, string> friendsName = new Dictionary<int, string>();
+    private Dictionary<int, int> friendsPicId = new Dictionary<int, int>();
+    //private Sprite[] sprites;
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +39,11 @@ public class FriendlistController : MonoBehaviour
             GameObject friendlistBtnObj = Instantiate(friendlistBtnPref, friendlistBtnParent) as GameObject;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendIndex = friend.uid;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendName = friend.friendName;
-            friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
+            //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;
             friendsName[friend.uid] = friend.friendName;
-
+            friendsPicId[friend.uid] = friend.picid;
+                 
         }
     }
 
@@ -47,5 +51,8 @@ public class FriendlistController : MonoBehaviour
     {
         friendNameText.text = friendsName[friendIndex];
         friendIndexText.text = "uid: " + (friendIndex);
+        //friendProfileImage.sprite = sprites[friendsPicId[friendIndex]];
+        friendProfileImage.sprite = Resources.Load<Sprite>(string.Format("PenguinProfileSamples/profile{0}", friendsPicId[friendIndex]));
+        friendProfileImage.SetNativeSize();
     }
 }
