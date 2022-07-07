@@ -15,7 +15,6 @@ public class FriendlistController : MonoBehaviour
     public TextAsset jsonFile;
     private Dictionary<int, string> friendsName = new Dictionary<int, string>();
     private Dictionary<int, int> friendsPicId = new Dictionary<int, int>();
-    //private Sprite[] sprites;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +24,6 @@ public class FriendlistController : MonoBehaviour
 
     private void LoadFriendlistButtons()
     {
-        // naive implementation: hard code the friendlist
-        //for (int i = 0; i < 10; i ++)
-        //{
-        //    GameObject friendlistBtnObj = Instantiate(friendlistBtnPref, friendlistBtnParent) as GameObject;
-        //    friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendIndex = i;
-        //    friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;
-        //}
-
         Friends friendsInJson = JsonUtility.FromJson<Friends>(jsonFile.text);
         foreach (Friend friend in friendsInJson.friends)
         {
