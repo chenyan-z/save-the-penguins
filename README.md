@@ -6,4 +6,4 @@ File Structure for the first commit:
 myAsset | -- myScripts
         | -- mySprites
         
-Questions for importing images, connecting to UI, scripting and objects > I could help.
+Backend files: Shen pushed to Assets/myAssets/backend_related/
