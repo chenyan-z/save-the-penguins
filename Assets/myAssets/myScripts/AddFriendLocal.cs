@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddFriend : MonoBehaviour
+public class AddFriendLocal : MonoBehaviour
 {
     public void AddNewFriend(GameObject friendToCopy)
     {
