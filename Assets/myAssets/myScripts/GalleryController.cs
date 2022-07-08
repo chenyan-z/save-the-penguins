@@ -27,8 +27,9 @@ public class GalleryController : MonoBehaviour
         foreach (GalleryPenguin penguin in galleriesInJson.galleryPenguinsList)
         {
             GameObject galleryImgObj = Instantiate(galleryImgPref, galleryImgParent) as GameObject;
-            galleryImgObj.GetComponent<GalleryItem>().index = penguin.ind;
-            //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendName = friend.friendName;
+            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinIndex = penguin.ind;
+            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinName = penguin.penguinName;
+            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinPicid = penguin.penguinPicid;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;
             //friendsName[friend.uid] = friend.friendName;

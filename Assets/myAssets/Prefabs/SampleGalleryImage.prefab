@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 280, y: 0}
-  m_SizeDelta: {x: -250, y: -330}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 0, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8765915148877999622
 CanvasRenderer:
@@ -226,9 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c62bce0d0fb4f26a1643b0dc49db56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  galleryPenguinIndex: 0
   galleryPenguinName: 
-  galleryPenguinNameText: {fileID: 0}
+  galleryPenguinPicid: 0
+  galleryPenguinNameText: {fileID: 5303798303713504586}
+  galleryPenguinImage: {fileID: 6267044240103772314}
 --- !u!1 &6267044240103772312
 GameObject:
   m_ObjectHideFlags: 0

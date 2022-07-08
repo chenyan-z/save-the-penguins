@@ -7,13 +7,17 @@ using TMPro;
 public class GalleryItem : MonoBehaviour
 {
 
-    [HideInInspector] public int index;
+    [HideInInspector] public int galleryPenguinIndex;
     [HideInInspector] public string galleryPenguinName;
+    [HideInInspector] public int galleryPenguinPicid;
 
     [SerializeField] TextMeshProUGUI galleryPenguinNameText;
+    [SerializeField] Image galleryPenguinImage;
 
     private void Start()
     {
-        //galleryPenguinNameText.text = galleryPenguinName;
+        galleryPenguinNameText.text = galleryPenguinName;
+        galleryPenguinImage.sprite = Resources.Load<Sprite>(string.Format("GalleryImgs/profile{0}", galleryPenguinPicid));
+        galleryPenguinImage.SetNativeSize();
     }
 }
