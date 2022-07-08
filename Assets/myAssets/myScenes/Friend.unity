@@ -740,7 +740,7 @@ MonoBehaviour:
   friendlistBtnPref: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
   friendlistBtnParent: {fileID: 115277773}
   friendProfileImage: {fileID: 194820896}
-  jsonFile: {fileID: 4900000, guid: c806a81faebb04ab09a118bdd1e29c2c, type: 3}
+  jsonFile: {fileID: 4900000, guid: 0985de076394a49898565941d838f2d4, type: 3}
 --- !u!1 &410676272
 GameObject:
   m_ObjectHideFlags: 0

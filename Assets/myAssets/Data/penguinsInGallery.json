@@ -1,0 +1,11 @@
+{
+	"galleryPenguinsList":
+	[
+		{"ind":1, "penguinName":"Kexin", "picid":"1"},
+    {"ind":2, "penguinName":"Yiyang", "picid":"2"},
+    {"ind":3, "penguinName":"Chenchao", "picid":"3"},
+    {"ind":4, "penguinName":"Langwen", "picid":"4"},
+    {"ind":5, "penguinName":"Shen", "picid":"5"},
+    {"ind":6, "penguinName":"Chenyan", "picid":"6"}
+	]
+}

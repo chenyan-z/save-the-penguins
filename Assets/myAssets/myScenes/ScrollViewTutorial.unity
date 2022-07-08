@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44407925, g: 0.49333048, b: 0.5723981, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -182,7 +182,7 @@ MonoBehaviour:
   friendlistBtnPref: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
   friendlistBtnParent: {fileID: 88390605}
   friendProfileImage: {fileID: 1897477718}
-  jsonFile: {fileID: 4900000, guid: c806a81faebb04ab09a118bdd1e29c2c, type: 3}
+  jsonFile: {fileID: 4900000, guid: 0985de076394a49898565941d838f2d4, type: 3}
 --- !u!114 &40379174
 MonoBehaviour:
   m_ObjectHideFlags: 0
