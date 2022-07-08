@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44407925, g: 0.49333048, b: 0.5723981, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 115277773}
     m_Modifications:
+    - target: {fileID: 2628031024878857313, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091797602}
+    - target: {fileID: 2628031024878857313, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DestroyGameObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628031024878857313, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeleteFriendLocal, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628031024878857326, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
       propertyPath: m_Name
       value: SampleFriend
@@ -222,7 +238,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2628031024878857326, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
 --- !u!1 &115277772
 GameObject:
@@ -456,6 +473,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194820894}
   m_CullTransparentMesh: 1
+--- !u!1 &233665770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+  m_PrefabInstance: {fileID: 96280738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &304687767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,11 +1482,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1008581556}
-        m_TargetAssemblyTypeName: AddFriend, Assembly-CSharp
+        m_TargetAssemblyTypeName: AddFriendLocal, Assembly-CSharp
         m_MethodName: AddNewFriend
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 233665770}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2055,3 +2077,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006370208}
   m_CullTransparentMesh: 1
+--- !u!1 &2091797596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2628031024878857324, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
+  m_PrefabInstance: {fileID: 96280738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2091797602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091797596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f926e11ef9cf4ae0a7c2b826d199970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
