@@ -23,12 +23,11 @@ public class GalleryController : MonoBehaviour
 
     private void LoadGallery()
     {
-        GalleryPenguin galleriesInJson = JsonUtility.FromJson<GalleryPenguin>(jsonGallery.text);
+        GalleryPenguins galleriesInJson = JsonUtility.FromJson<GalleryPenguins>(jsonGallery.text);
         foreach (GalleryPenguin penguin in galleriesInJson.galleryPenguinsList)
         {
             GameObject galleryImgObj = Instantiate(galleryImgPref, galleryImgParent) as GameObject;
-            //galleryImgObj.GetComponent<PenguinInGalleryItem>().penguinIndex = penguin.ind;
-            //galleryImgObj.GetComponent<PenguinInGalleryItem>().penguinIndex = penguin.ind;
+            galleryImgObj.GetComponent<GalleryItem>().index = penguin.ind;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendName = friend.friendName;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;

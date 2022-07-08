@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8765915148877999622}
   - component: {fileID: 5303798303713504586}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GalleryPenguinName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 6267044240103229198}
   - component: {fileID: 6267044240103229192}
   - component: {fileID: 6267044240103229193}
+  - component: {fileID: 140582032424990182}
   m_Layer: 5
   m_Name: SampleGalleryImage
   m_TagString: Untagged
@@ -213,6 +214,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &140582032424990182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267044240103229199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c62bce0d0fb4f26a1643b0dc49db56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  galleryPenguinName: 
+  galleryPenguinNameText: {fileID: 0}
 --- !u!1 &6267044240103772312
 GameObject:
   m_ObjectHideFlags: 0
