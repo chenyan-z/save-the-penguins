@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/myAssets/myScenes/Friend.unity
     guid: cfac9ced2365b4fa181007f6d3f43162
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Test3D.unity
-    guid: 00772e7464d504da989486cdcc811db6
+    path: Assets/myAssets/myScenes/AddFriends.unity
+    guid: 52cf0feeb0a9340c9bab4c6da03e7d38
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 273001ced62a24407ae097dcf129a1f8, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ed355a77c27c44bee984323236e44b9f, type: 2}

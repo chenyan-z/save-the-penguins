@@ -608,11 +608,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194820894}
   m_CullTransparentMesh: 1
---- !u!1 &233665770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2628031025225720280, guid: d8b1446fabdfc4e1ab24a37a52edd766, type: 3}
-  m_PrefabInstance: {fileID: 96280738}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &304687767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,15 +2039,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1008581556}
-        m_TargetAssemblyTypeName: AddFriendLocal, Assembly-CSharp
-        m_MethodName: AddNewFriend
-        m_Mode: 2
+        m_TargetAssemblyTypeName: NavigateMenu, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 233665770}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AddFriends
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1008581554
@@ -2102,7 +2097,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008581551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56a40228b96a43589ca8412423dcdc5, type: 3}
+  m_Script: {fileID: 11500000, guid: e3b64c19426d8436bb21d5a9d0ad7a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1097690295
