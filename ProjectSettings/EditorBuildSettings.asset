@@ -5,30 +5,36 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/Login.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/Homepage.unity
     guid: 8574b8ff5a6d742ce9bd4a5f2be77768
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/GameMenu.unity
     guid: 1cd7430fd62fb49b0a4ba778df6c5405
   - enabled: 1
     path: Assets/myAssets/myScenes/GameScene.unity
     guid: c01ea8fed332e413096790389e953626
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/Settings.unity
     guid: fa7d0fd8759834ae4ae8fd27d9651370
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/Gallery.unity
     guid: 38cbade37dcf8439f91537925f03e2fc
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/Friend.unity
     guid: cfac9ced2365b4fa181007f6d3f43162
-  - enabled: 1
-    path: Assets/Test3D.unity
-    guid: 00772e7464d504da989486cdcc811db6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/myAssets/myScenes/PlaneDetection.unity
+    guid: f7ef086ab19c541629bae997e2630043
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 273001ced62a24407ae097dcf129a1f8, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ed355a77c27c44bee984323236e44b9f, type: 2}
