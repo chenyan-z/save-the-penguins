@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &579832315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1360307068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 1489801761}
   - component: {fileID: 1489801763}
   m_Layer: 0
-  m_Name: ScriptManager
+  m_Name: ScriptManager1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c81018db66ff034599d840a899c7f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUid: {fileID: 1360307069}
+  myUid: 0
   friendUid: {fileID: 309257395}
 --- !u!4 &1489801762
 Transform:
