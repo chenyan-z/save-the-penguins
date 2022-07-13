@@ -38,12 +38,12 @@ public class Login : MonoBehaviour
                 Scene scene = SceneManager.GetActiveScene();
                 if (scene.name == "Login")
                 {   
-                    SceneManager.LoadScene("Hompage");
+                    SceneManager.LoadScene("Homepage");
                 }
                 return;
             }
         }
-        Debug.Log("Current scene: RegistrationTest. Login failed.");
+        Debug.Log("Current scene: Login Page. Login failed.");
         mysql.CloseSql();
     }
 }
