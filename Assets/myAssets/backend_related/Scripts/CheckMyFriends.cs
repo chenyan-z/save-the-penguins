@@ -6,18 +6,17 @@ using MySql.Data.MySqlClient;
 using System.Data;
 
 // has already defined in Friend.cs
-public class Friend
-{
-    public int uid;
-    public string friendName;
-    public int picid;
-
-}
+// public class Friend
+// {
+//    public int uid;
+//    public string friendName;
+//    public int picid;
+//}
 // has already defined in Friends.cs
-public class Friends
-{
-    public Friend[] friends;
-}
+//public class Friends
+//{
+//    public Friend[] friends;
+//}
 
 public class CheckMyFriends : MonoBehaviour
 {

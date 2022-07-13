@@ -1,6 +1,7 @@
 using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour
 {
@@ -31,8 +32,14 @@ public class Login : MonoBehaviour
             {
                 // if successfully login, store the current uid
                 uid = (int)table.Rows[0][0];
-                Debug.Log("Current scene: RegistrationTest. Login successfully." + " Userid: " + table.Rows[0][0]);
+                Debug.Log("Current scene: Login Page. Login successfully." + " Userid: " + table.Rows[0][0]);
                 mysql.CloseSql();
+                // if successfully login, jump to next scene
+                Scene scene = SceneManager.GetActiveScene();
+                if (scene.name == "Login")
+                {   
+                    SceneManager.LoadScene("Hompage");
+                }
                 return;
             }
         }
