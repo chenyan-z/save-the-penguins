@@ -10,7 +10,7 @@ public class FriendRequestController : MonoBehaviour
     [SerializeField] TextMeshProUGUI requestName;
     [SerializeField] GameObject requestPref;
     [SerializeField] Transform requestParent;
-    private CheckFriendRequests checkFrinedRequests;
+    private CheckFriendRequests checkFriendRequests;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,11 @@ public class FriendRequestController : MonoBehaviour
 
     private void LoadRequest()
     {
-        checkFrinedRequests = GameObject.FindGameObjectWithTag("RequestTag").GetComponent<CheckFriendRequests>();
-        checkFrinedRequests.CheckFriendRequestsClick();
+        checkFriendRequests = GameObject.FindGameObjectWithTag("RequestTag").GetComponent<CheckFriendRequests>();
+        checkFriendRequests.CheckFriendRequestsClick();
 
         //for now only 1 friend request is returend.
-        Friend requestFriend = checkFrinedRequests.friendRequest;
+        Friend requestFriend = checkFriendRequests.friendRequest;
 
 
         if(requestFriend.uid != 0){
