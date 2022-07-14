@@ -2,7 +2,10 @@ using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CheckGallery : MonoBehaviour
+
+// Checking gallery from an input uid.
+
+public class CheckGalleryFromUID : MonoBehaviour
 {
     private string host = "120.77.148.135";
     private string port = "3306";
@@ -17,7 +20,7 @@ public class CheckGallery : MonoBehaviour
 
     private void Start()
     {
-        myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
+        myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<GalleryManager>().uid;
         mysql = new MySqlAccess(host, port, userName, password, databaseName);
     }
     public void CheckGalleryClick()

@@ -9,17 +9,17 @@ public class FriendlistGalleryButton : MonoBehaviour
     public FriendlistButtonItem friendlistButtonItem;
     void Start()
     {
-        
+
     }
     public void OnButtonClick()
     {
-        SceneManager.LoadScene("Gallery");
+        SceneManager.LoadScene("FriendGallery");
         GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<GalleryManager>().uid = friendlistButtonItem.friendIndex.ToString();
 
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
