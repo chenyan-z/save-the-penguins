@@ -17,11 +17,14 @@ public class FriendlistController : MonoBehaviour
     [SerializeField] Image friendProfileDeleteImage;
     [SerializeField] GameObject friendlistDeleteWindow;
 
-    public TextAsset jsonFile;
     //public CheckMyFriends checkMyFriends;
     private Dictionary<int, string> friendsName = new Dictionary<int, string>();
     private Dictionary<int, int> friendsPicId = new Dictionary<int, int>();
+    private Dictionary<int, GameObject> friendsEntity = new Dictionary<int, GameObject>();
     private CheckMyFriends checkMyFriends;
+    private DeleteFriend deleteFriend;
+    public GameObject content;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +35,12 @@ public class FriendlistController : MonoBehaviour
         
     }
 
-    private void LoadFriendlistButtons()
+    public void LoadFriendlistButtons()
     {
-        //Friends friends = JsonUtility.FromJson<Friends>(jsonFile.text);
-        //Friends friends = checkMyFriends.myFriends;
-
+        //foreach (Transform child in content.transform)
+        //{
+        //    GameObject.Destroy(child.gameObject);
+        //}
         checkMyFriends = GameObject.FindGameObjectWithTag("FriendlistTag").GetComponent<CheckMyFriends>();
         checkMyFriends.CheckMyFriendsClick();
         Friends friends = checkMyFriends.myFriends;
@@ -44,6 +48,7 @@ public class FriendlistController : MonoBehaviour
         {
             
             GameObject friendlistBtnObj = Instantiate(friendlistBtnPref, friendlistBtnParent) as GameObject;
+            
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendIndex = friend.uid;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendName = friend.friendName;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;
@@ -54,7 +59,8 @@ public class FriendlistController : MonoBehaviour
 
             friendsName[friend.uid] = friend.friendName;
             friendsPicId[friend.uid] = friend.picid;
-                 
+            friendsEntity[friend.uid] = friendlistBtnObj;
+
         }
         
     }
@@ -73,5 +79,9 @@ public class FriendlistController : MonoBehaviour
         friendNameDeleteText.text = string.Format("Are you sure to delete\n {0}?", friendsName[friendIndex]);
         friendProfileDeleteImage.sprite = Resources.Load<Sprite>(string.Format("PenguinProfileSamples/profile{0}", friendsPicId[friendIndex]));
         friendProfileDeleteImage.SetNativeSize();
+        deleteFriend = GameObject.FindGameObjectWithTag("FriendlistTag").GetComponent<DeleteFriend>();
+        DeleteFriendLocal deleteFriendLocal = GameObject.FindGameObjectWithTag("FriendlistTag").GetComponent<DeleteFriendLocal>();
+        deleteFriendLocal.SetObjectToDestroy(friendsEntity[friendIndex]);
+        deleteFriend.SetFriendUid(friendIndex.ToString());
     }
 }
