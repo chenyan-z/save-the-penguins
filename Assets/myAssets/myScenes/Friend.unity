@@ -827,16 +827,40 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NavigateMenu, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 941966590}
+        m_TargetAssemblyTypeName: DeleteFriend, Assembly-CSharp
+        m_MethodName: DeleteFriendClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Gallery
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1097690295}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 941966591}
+        m_TargetAssemblyTypeName: DeleteFriendLocal, Assembly-CSharp
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &315284931
@@ -890,7 +914,6 @@ GameObject:
   - component: {fileID: 344343932}
   - component: {fileID: 344343931}
   - component: {fileID: 344343934}
-  - component: {fileID: 344343935}
   m_Layer: 5
   m_Name: FriendsListScroll View
   m_TagString: Untagged
@@ -1007,21 +1030,7 @@ MonoBehaviour:
   friendNameDeleteText: {fileID: 9063691}
   friendProfileDeleteImage: {fileID: 385879702}
   friendlistDeleteWindow: {fileID: 1097690295}
---- !u!114 &344343935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344343929}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c756d92d8a2a24a95b9e153503dad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUid: 
-  myFriends:
-    friends: []
+  content: {fileID: 115277772}
 --- !u!1 &385879700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1988,8 @@ GameObject:
   m_Component:
   - component: {fileID: 941966589}
   - component: {fileID: 941966588}
+  - component: {fileID: 941966590}
+  - component: {fileID: 941966591}
   m_Layer: 0
   m_Name: ScriptManager1
   m_TagString: FriendlistTag
@@ -2008,7 +2019,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941966587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 968.4068, y: 570.3855, z: -9.120969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2016,6 +2027,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &941966590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941966587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f524feae3babb449d2c4c645b6b4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUid: 
+  friendUid: 
+--- !u!114 &941966591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941966587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f926e11ef9cf4ae0a7c2b826d199970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1008581551
 GameObject:
   m_ObjectHideFlags: 0

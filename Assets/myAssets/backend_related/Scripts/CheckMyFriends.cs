@@ -40,6 +40,7 @@ public class CheckMyFriends : MonoBehaviour
 
     public void CheckMyFriendsClick()
     {
+        Debug.Log("Moo");
         if (myUid != "-1")
         {
             mysql.OpenSql();

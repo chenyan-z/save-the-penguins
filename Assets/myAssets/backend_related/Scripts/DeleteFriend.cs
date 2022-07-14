@@ -16,21 +16,24 @@ public class DeleteFriend : MonoBehaviour
 
     // required input data for this script
     public string myUid;
-    public InputField friendUid;
+    public string friendUid;
     
     private void Start()
     {
         myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
         mysql = new MySqlAccess(host, port, userName, password, databaseName);
     }
-
+    public void SetFriendUid(string uid)
+    {
+        friendUid = uid;
+    }
     // Update is called once per frame
     public void DeleteFriendClick()
     {
-        if (myUid != null && friendUid.text != null)
+        if (myUid != null && friendUid != null)
         {
             mysql.OpenSql();
-            DataSet queryResult = mysql.Select("friendinfo", new string[] { "userid2" }, new string[] {"`" + "userid1" + "`", "`" + "userid2" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid.text});
+            DataSet queryResult = mysql.Select("friendinfo", new string[] { "userid2" }, new string[] {"`" + "userid1" + "`", "`" + "userid2" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid});
             if (queryResult != null)
             {
                 DataTable table = queryResult.Tables[0];
@@ -41,12 +44,12 @@ public class DeleteFriend : MonoBehaviour
                 }
                 else
                 {
-                    string query1 = mysql.Delete("friendinfo", new string[] {"`" + "userid1" + "`", "`" + "userid2" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid.text});
+                    string query1 = mysql.Delete("friendinfo", new string[] {"`" + "userid1" + "`", "`" + "userid2" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid});
                     MySqlCommand cmd1 = new MySqlCommand(query1, mysql.mySqlConnection);
                     MySqlDataReader dataReader1 = cmd1.ExecuteReader();
                     dataReader1.Close();
                     
-                    string query2 = mysql.Delete("friendinfo", new string[] {"`" + "userid2" + "`", "`" + "userid1" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid.text});
+                    string query2 = mysql.Delete("friendinfo", new string[] {"`" + "userid2" + "`", "`" + "userid1" + "`"}, new string[] { "=", "=" }, new string[] { myUid, friendUid});
                     MySqlCommand cmd2 = new MySqlCommand(query2, mysql.mySqlConnection);
                     MySqlDataReader dataReader2 = cmd2.ExecuteReader();
                     dataReader2.Close();

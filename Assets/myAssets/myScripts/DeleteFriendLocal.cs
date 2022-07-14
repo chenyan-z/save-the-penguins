@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class DeleteFriendLocal : MonoBehaviour
 {
-    public void DestroyGameObject(GameObject objectToDestroy)
+    private GameObject objectToDestroy;
+    public void SetObjectToDestroy(GameObject _objectToDestroy)
+    {
+        objectToDestroy = _objectToDestroy;
+    }
+
+    public void DestroyGameObject()
     {
       Destroy (objectToDestroy);
     }
