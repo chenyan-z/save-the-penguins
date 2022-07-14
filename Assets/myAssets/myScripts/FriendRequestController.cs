@@ -37,6 +37,8 @@ public class FriendRequestController : MonoBehaviour
           {
               GameObject requestObj = Instantiate(requestPref, requestParent) as GameObject;
               requestObj.GetComponent<RequestItem>().requestFriendName = tmpname;
+              requestObj.GetComponent<RequestItem>().curRequestFriend = requestFriend;
+              requestObj.GetComponent<RequestItem>().requestUidText.text = (requestFriend.uid).ToString();
               //galleryImgObj.GetComponent<GalleryItem>().galleryPenguinName = penguin.penguinName;
               //galleryImgObj.GetComponent<GalleryItem>().galleryPenguinPicid = penguin.penguinPicid;
               //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
