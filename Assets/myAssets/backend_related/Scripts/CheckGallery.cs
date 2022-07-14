@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class CheckGallery : MonoBehaviour
 {
     private string host = "120.77.148.135";
-    private string port = "3306";     
+    private string port = "3306";
     private string userName = "root";
     private string password = "penguinspy123456";
     private string databaseName = "penguintest";
@@ -14,7 +14,7 @@ public class CheckGallery : MonoBehaviour
      // required input data for this script
     public InputField loginname;
     public InputField loginpassword;
-   
+
     private void Start()
     {
         mysql = new MySqlAccess(host, port, userName, password, databaseName);

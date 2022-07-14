@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 5828984460451846888}
   - component: {fileID: 5828984460451846892}
   - component: {fileID: 5828984460451846895}
+  - component: {fileID: -9013973790196524214}
   m_Layer: 5
   m_Name: SampleRequest
   m_TagString: Untagged
@@ -593,6 +594,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-9013973790196524214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5828984460451846891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2cb58e0801814fab83d17ddf593cb35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestFriendName: 
+  requestNameText: {fileID: 5828984461291654856}
 --- !u!1 &5828984461291654858
 GameObject:
   m_ObjectHideFlags: 0
