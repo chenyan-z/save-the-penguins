@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RegistrationTag
   - FriendlistTag
+  - GalleryTag
   layers:
   - Default
   - TransparentFX

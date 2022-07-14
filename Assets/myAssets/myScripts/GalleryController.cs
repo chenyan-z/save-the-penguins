@@ -14,6 +14,8 @@ public class GalleryController : MonoBehaviour
     public TextAsset jsonGallery;
     private Dictionary<int, string> penguinsName = new Dictionary<int, string>();
     private Dictionary<int, int> penguinsPicId = new Dictionary<int, int>();
+    //private int[] galleryIndicator = {1,1,0,1,1,1};
+    private CheckGallery checkGallery;
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +25,24 @@ public class GalleryController : MonoBehaviour
 
     private void LoadGallery()
     {
+        checkGallery = GameObject.FindGameObjectWithTag("GalleryTag").GetComponent<CheckGallery>();
+        checkGallery.CheckGalleryClick();
+        int[] penguinIndicator = checkGallery.myPenguins;
         GalleryPenguins galleriesInJson = JsonUtility.FromJson<GalleryPenguins>(jsonGallery.text);
+        int tmpcount = 0;
         foreach (GalleryPenguin penguin in galleriesInJson.galleryPenguinsList)
         {
-            GameObject galleryImgObj = Instantiate(galleryImgPref, galleryImgParent) as GameObject;
-            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinIndex = penguin.ind;
-            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinName = penguin.penguinName;
-            galleryImgObj.GetComponent<GalleryItem>().galleryPenguinPicid = penguin.penguinPicid;
+            if (penguinIndicator[tmpcount] == 1){
+              GameObject galleryImgObj = Instantiate(galleryImgPref, galleryImgParent) as GameObject;
+              galleryImgObj.GetComponent<GalleryItem>().galleryPenguinIndex = penguin.ind;
+              galleryImgObj.GetComponent<GalleryItem>().galleryPenguinName = penguin.penguinName;
+              galleryImgObj.GetComponent<GalleryItem>().galleryPenguinPicid = penguin.penguinPicid;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendPicId = friend.picid;
             //friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendlistController = this;
             //friendsName[friend.uid] = friend.friendName;
             //friendsPicId[friend.uid] = friend.picid;
+            }
+            tmpcount = tmpcount + 1;
         }
     }
 }
