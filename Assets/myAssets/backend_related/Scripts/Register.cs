@@ -2,7 +2,6 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Register : MonoBehaviour
 {
@@ -14,8 +13,8 @@ public class Register : MonoBehaviour
     private MySqlAccess mysql; 
     
     // required input data for this script
-    public GameObject registerName;
-    public GameObject registerPassword;
+    public InputField registerName;
+    public InputField registerPassword;
  
     private void Start()
     {
@@ -23,10 +22,10 @@ public class Register : MonoBehaviour
     }
     public void RegisterClick()
     {
-        if (registerName.GetComponent<TMP_InputField>().text != "" && registerPassword.GetComponent<TMP_InputField>().text != null)
+        if (registerName.text != "" && registerPassword.text != null)
         {
             mysql.OpenSql();
-            DataSet queryResult = mysql.Select("userinfo", new string[] { "username" }, new string[] { "`" + "username" + "`" }, new string[] { "=" }, new string[] { registerName.GetComponent<TMP_InputField>().text });
+            DataSet queryResult = mysql.Select("userinfo", new string[] { "username" }, new string[] { "`" + "username" + "`" }, new string[] { "=" }, new string[] { registerName.text });
             if (queryResult!= null)
             {
                 DataTable table = queryResult.Tables[0];
@@ -37,7 +36,7 @@ public class Register : MonoBehaviour
                 }
                 else
                 {
-                    string query = mysql.Insert("userinfo", new string[] { "username", "password" }, new string[] { registerName.GetComponent<TMP_InputField>().text, registerPassword.GetComponent<TMP_InputField>().text });
+                    string query = mysql.Insert("userinfo", new string[] { "username", "password" }, new string[] { registerName.text, registerPassword.text });
                     MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
                     MySqlDataReader dataReader = cmd.ExecuteReader();
                     dataReader.Close();

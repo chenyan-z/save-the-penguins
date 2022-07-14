@@ -2,7 +2,6 @@ using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class Login : MonoBehaviour
 {
@@ -14,8 +13,8 @@ public class Login : MonoBehaviour
     private MySqlAccess mysql;
 
      // required input data for this script
-    public GameObject loginname;
-    public GameObject loginpassword;
+    public InputField loginname;
+    public InputField loginpassword;
     public int uid = -1;
 
     private void Start()
@@ -25,7 +24,7 @@ public class Login : MonoBehaviour
     public void LoginClick()
     {
         mysql.OpenSql();
-        DataSet queryResult = mysql.Select("userinfo", new string[] { "userid" }, new string[] { "`" + "username" + "`", "`" + "password" + "`" }, new string[] { "=", "=" }, new string[] { loginname.GetComponent<TMP_InputField>().text,loginpassword.GetComponent<TMP_InputField>().text });
+        DataSet queryResult = mysql.Select("userinfo", new string[] { "userid" }, new string[] { "`" + "username" + "`", "`" + "password" + "`" }, new string[] { "=", "=" }, new string[] { loginname.text,loginpassword.text });
         if (queryResult != null)
         {
             DataTable table = queryResult.Tables[0];
@@ -38,7 +37,7 @@ public class Login : MonoBehaviour
                 // if successfully login, jump to next scene
                 Scene scene = SceneManager.GetActiveScene();
                 if (scene.name == "Login")
-                {
+                {   
                     SceneManager.LoadScene("Homepage");
                 }
                 return;

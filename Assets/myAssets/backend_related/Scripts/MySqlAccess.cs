@@ -151,6 +151,21 @@ public class MySqlAccess
         }
         return query;
     }
+
+    public string Update(string tableName, string updateColumn, string updateValue, string[] columnNames, string[] operations, string[] requiredValues)
+    {
+        if (columnNames.Length != operations.Length || operations.Length != requiredValues.Length)
+        // check input length 
+        {
+            throw new Exception("Wrong input format: " + "please make sure the number of columns, operations and required values are the same.");
+        }
+        string query = "UPDATE " + "`" + tableName + "`" + " SET " + "`" + updateColumn + "`" + " = " + updateValue + " WHERE " + columnNames[0] + " " + operations[0] + " '" + requiredValues[0] + "'";
+        for (int i = 1; i < columnNames.Length; i++)
+        {
+            query += " and " + columnNames[i] + " " + operations[i] + " '" + requiredValues[i] + "'";
+        }
+        return query;
+    }
     
     private DataSet QuerySet(string sqlString)
     {

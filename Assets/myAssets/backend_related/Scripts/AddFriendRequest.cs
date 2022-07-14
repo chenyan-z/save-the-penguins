@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-public class AddFriend : MonoBehaviour
+public class AddFriendRequest : MonoBehaviour
 {
     private string host = "120.77.148.135";
     private string port = "3306";     
@@ -26,7 +26,7 @@ public class AddFriend : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void AddFriendClick()
+    public void AddFriendRequestClick()
     {
         if (myUid != "-1" && friendUid.text != null)
         {
@@ -42,16 +42,12 @@ public class AddFriend : MonoBehaviour
                 }
                 else
                 {
-                    string query1 = mysql.Insert("friendinfo", new string[] { "userid1", "userid2" }, new string[] { myUid, friendUid.text });
-                    MySqlCommand cmd1 = new MySqlCommand(query1, mysql.mySqlConnection);
-                    MySqlDataReader dataReader1 = cmd1.ExecuteReader();
-                    dataReader1.Close();
-                    
-                    string query2 = mysql.Insert("friendinfo", new string[] { "userid1", "userid2" }, new string[] { friendUid.text, myUid });
-                    MySqlCommand cmd2 = new MySqlCommand(query2, mysql.mySqlConnection);
-                    MySqlDataReader dataReader2 = cmd2.ExecuteReader();
-                    dataReader2.Close();
-                    Debug.Log("Successful added.");
+                    string query = mysql.Update("userinfo", "friendrequest", myUid, new string[] { "userid" }, new string[] { "=" }, new string[] { friendUid.text });
+                    //Debug.Log(query);
+                    Debug.Log("Friend request sent successfully! " + "Uid" + myUid.ToString() + " wants to add " + "Uid" + friendUid.text);
+                    MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    dataReader.Close();
                 }
             }
             mysql.CloseSql();
@@ -62,3 +58,4 @@ public class AddFriend : MonoBehaviour
         }
     }
 }
+
