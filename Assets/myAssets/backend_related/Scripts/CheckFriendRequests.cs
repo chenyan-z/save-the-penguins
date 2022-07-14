@@ -22,16 +22,16 @@ using UnityEngine.SceneManagement;
 public class CheckFriendRequests : MonoBehaviour
 {
     private string host = "120.77.148.135";
-    private string port = "3306";     
+    private string port = "3306";
     private string userName = "root";
     private string password = "penguinspy123456";
     private string databaseName = "penguintest";
     private MySqlAccess mysql;
 
-    // required input data for this script  
-    public string myUid; 
+    // required input data for this script
+    public string myUid;
     public Friend friendRequest;
-    
+
     private void Start()
     {
         myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
@@ -48,10 +48,10 @@ public class CheckFriendRequests : MonoBehaviour
             if (queryResult != null)
             {
                 DataTable table = queryResult.Tables[0];
-                if (table.Rows.Count > 0 && (int)table.Rows[0][0] != 0)        
+                if (table.Rows.Count > 0 && (int)table.Rows[0][0] != 0)
                 {
                     DataSet queryFriend = mysql.Select("userinfo", new string[] { "username", "picid" }, new string[] {"`" + "userid" + "`"}, new string[] { "=" }, new string[] { table.Rows[0][0].ToString() });
-                    if (queryFriend != null) 
+                    if (queryFriend != null)
                     {
                         //uid
                         friendRequest.uid = (int)table.Rows[0][0];
@@ -68,6 +68,7 @@ public class CheckFriendRequests : MonoBehaviour
                 else
                 {
                     Debug.Log("No friend requests.");
+                    Debug.Log((friendRequest.uid).ToString());
                 }
             }
             mysql.CloseSql();
@@ -78,7 +79,7 @@ public class CheckFriendRequests : MonoBehaviour
         }
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "FriendList")
-        {   
+        {
             SceneManager.LoadScene("FriendRequest");
         }
         return;
