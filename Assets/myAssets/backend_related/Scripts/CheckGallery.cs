@@ -17,7 +17,7 @@ public class CheckGallery : MonoBehaviour
    
     private void Start()
     {
-        myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
+        myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<GalleryManager>().uid;
         mysql = new MySqlAccess(host, port, userName, password, databaseName);
     }
     public void CheckGalleryClick()

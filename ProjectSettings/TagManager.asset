@@ -9,6 +9,7 @@ TagManager:
   - GalleryTag
   - RequestTag
   - SearchTag
+  - GalleryUidTag
   layers:
   - Default
   - TransparentFX
