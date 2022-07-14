@@ -18,20 +18,31 @@ public class FriendlistController : MonoBehaviour
     [SerializeField] GameObject friendlistDeleteWindow;
 
     public TextAsset jsonFile;
+    //public CheckMyFriends checkMyFriends;
     private Dictionary<int, string> friendsName = new Dictionary<int, string>();
     private Dictionary<int, int> friendsPicId = new Dictionary<int, int>();
-
+    private CheckMyFriends checkMyFriends;
     // Start is called before the first frame update
     void Start()
     {
+        //checkMyFriends = gameObject.GetComponent<CheckMyFriends>();
+        //checkMyFriends.CheckMyFriendsClick();
+        
         LoadFriendlistButtons();
+        
     }
 
     private void LoadFriendlistButtons()
     {
-        Friends friendsInJson = JsonUtility.FromJson<Friends>(jsonFile.text);
-        foreach (Friend friend in friendsInJson.friends)
+        //Friends friends = JsonUtility.FromJson<Friends>(jsonFile.text);
+        //Friends friends = checkMyFriends.myFriends;
+
+        checkMyFriends = GameObject.FindGameObjectWithTag("FriendlistTag").GetComponent<CheckMyFriends>();
+        checkMyFriends.CheckMyFriendsClick();
+        Friends friends = checkMyFriends.myFriends;
+        foreach (Friend friend in friends.friends)
         {
+            
             GameObject friendlistBtnObj = Instantiate(friendlistBtnPref, friendlistBtnParent) as GameObject;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendIndex = friend.uid;
             friendlistBtnObj.GetComponent<FriendlistButtonItem>().friendName = friend.friendName;
@@ -45,6 +56,7 @@ public class FriendlistController : MonoBehaviour
             friendsPicId[friend.uid] = friend.picid;
                  
         }
+        
     }
 
     public void OnFriendlistButtonClick(int friendIndex)

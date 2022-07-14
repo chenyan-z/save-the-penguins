@@ -890,6 +890,7 @@ GameObject:
   - component: {fileID: 344343932}
   - component: {fileID: 344343931}
   - component: {fileID: 344343934}
+  - component: {fileID: 344343935}
   m_Layer: 5
   m_Name: FriendsListScroll View
   m_TagString: Untagged
@@ -1006,7 +1007,21 @@ MonoBehaviour:
   friendNameDeleteText: {fileID: 9063691}
   friendProfileDeleteImage: {fileID: 385879702}
   friendlistDeleteWindow: {fileID: 1097690295}
-  jsonFile: {fileID: 4900000, guid: 0985de076394a49898565941d838f2d4, type: 3}
+--- !u!114 &344343935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344343929}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c756d92d8a2a24a95b9e153503dad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUid: 
+  myFriends:
+    friends: []
 --- !u!1 &385879700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,6 +1969,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834893580}
   m_CullTransparentMesh: 1
+--- !u!1 &941966587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941966589}
+  - component: {fileID: 941966588}
+  m_Layer: 0
+  m_Name: ScriptManager1
+  m_TagString: FriendlistTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &941966588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941966587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c756d92d8a2a24a95b9e153503dad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUid: 
+  myFriends:
+    friends: []
+--- !u!4 &941966589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941966587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 968.4068, y: 570.3855, z: -9.120969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008581551
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Unity.IO;
 
 // has already defined in Friend.cs
 // public class Friend
@@ -26,16 +27,18 @@ public class CheckMyFriends : MonoBehaviour
     private string password = "penguinspy123456";
     private string databaseName = "penguintest";
     private MySqlAccess mysql;
+    
 
     // required input data for this script  
     public string myUid; 
-    public InputField friendUid;
+    //public InputField friendUid;
     public Friends myFriends = new Friends();
     
     private void Start()
     {
         myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
         mysql = new MySqlAccess(host, port, userName, password, databaseName);
+        //CheckMyFriendsClick();
         Debug.Log("Current scene: FriendList. Current userid: " + myUid.ToString());
     }
 
