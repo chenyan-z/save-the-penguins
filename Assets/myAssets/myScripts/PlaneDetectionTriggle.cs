@@ -10,6 +10,7 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARPlaneManager))] 
 public class PlaneDetectionTriggle : MonoBehaviour
 {
+    [SerializeField]
     private ARPlaneManager planeManager;
     [SerializeField] //able to change the image displayed at runtime
     private Image toggleButtonImg;
