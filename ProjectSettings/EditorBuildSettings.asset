@@ -35,9 +35,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/myAssets/myScenes/PlaneDetection.unity
     guid: f7ef086ab19c541629bae997e2630043
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/FindClue.unity
     guid: 59275aeb6d5e6434d96dafb7da29e1b6
+  - enabled: 1
+    path: Assets/myAssets/myScenes/CollectScissors.unity
+    guid: e9930364f40bf404398d11b879d62921
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 273001ced62a24407ae097dcf129a1f8, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ed355a77c27c44bee984323236e44b9f, type: 2}
