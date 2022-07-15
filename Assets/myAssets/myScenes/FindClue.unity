@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07868cc1b754844abb3c70ebed6794f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 2023154236}
 --- !u!4 &952961560
 Transform:
   m_ObjectHideFlags: 0
@@ -1345,6 +1346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170fbdb2d0254431b8c0af91ecfd0acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 0}
+  hintToSpawn: {fileID: 0}
   objectToSpawn: {fileID: 743016953722197146, guid: 48bd4298c92604800aed057f09437aad, type: 3}
 --- !u!4 &1422299494
 Transform:
