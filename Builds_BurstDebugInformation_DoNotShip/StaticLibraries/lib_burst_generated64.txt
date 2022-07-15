@@ -159,8 +159,8 @@ Library: lib_burst_generated64
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Burst.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.2D.Animation.Runtime.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll
---root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Timeline.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
+--root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Timeline.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.XR.OpenXR.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Services.Core.Internal.dll
