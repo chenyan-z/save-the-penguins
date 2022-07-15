@@ -11,7 +11,7 @@ public class PlacementIndicator : MonoBehaviour
     private GameObject visual;
     
     [SerializeField]
-    ARRaycastManager rayManager;
+    ARRaycastManager raycastManager;
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
     //used for manipulate existing ar objects
     // private PlacementObjects[] placedObjects;
@@ -36,7 +36,7 @@ public class PlacementIndicator : MonoBehaviour
         if(planeManager.enabled) // clue-detection mode
         {
             // shoot a raycast from the center of the screen
-            rayManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.PlaneWithinBounds);
+            raycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.PlaneWithinBounds);
             // if we hit an AR plane, update the position and rotation
             if (hits.Count > 0)
             {
