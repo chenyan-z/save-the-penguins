@@ -30,6 +30,7 @@ public class SearchButtonController : MonoBehaviour
         friendIndexText.text = "uid: "+(searchResult.uid).ToString();
         friendProfileImage.sprite = Resources.Load<Sprite>(string.Format("PenguinProfileSamples/profile{0}", searchResult.picid));
         friendProfileImage.SetNativeSize();
+        
     }
         /*checkMyFriends.CheckMyFriendsClick();
         Friends friends = checkMyFriends.myFriends;
