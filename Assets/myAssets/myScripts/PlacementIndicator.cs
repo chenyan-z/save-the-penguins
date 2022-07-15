@@ -18,8 +18,6 @@ public class PlacementIndicator : MonoBehaviour
     // private PlacementObjects lastSelectedObject;
     // private Vector2 touchPosition = default;
 
-    // [SerializeField]
-    // private Camera arCamera;
     void Start ()
     {
         // get the components
@@ -27,13 +25,14 @@ public class PlacementIndicator : MonoBehaviour
         planeManager = FindObjectOfType<ARPlaneManager>();
         // detectoinTriggle = FindObjectOfType<PlaneDetectionTriggle>();
         visual = transform.GetChild(0).gameObject;
+        planeManager = FindObjectOfType<ARPlaneManager>();
 
         // hide the placement visual
         visual.SetActive(false);
     }
 
     void Update ()
-    {   
+    {
         if(planeManager.enabled) // clue-detection mode
         {
             // shoot a raycast from the center of the screen
@@ -43,19 +42,15 @@ public class PlacementIndicator : MonoBehaviour
             {
                 transform.position = hits[0].pose.position;
                 transform.rotation = hits[0].pose.rotation;
-
                 if (!visual.activeInHierarchy)
                 {
                     visual.SetActive(true);
                 }
             }
-        }
-        else // object-interaction mode
-        {
-            visual.SetActive(false);
+            else // object-interaction mode
+            {
+                visual.SetActive(false);
+            }
         }
     }
-
-
-
 }
