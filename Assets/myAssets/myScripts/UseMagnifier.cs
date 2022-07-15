@@ -8,34 +8,25 @@ using UnityEngine.XR.ARSubsystems;
 public class UseMagnifier : MonoBehaviour
 {
     public float lastSpawnTime;
-
     [SerializeField]
     private int countObject;
-
     [SerializeField]
     private ARPlaneManager planeManager;
 
     [SerializeField]
     private PlacementIndicator placementIndicator;
-
     [SerializeField] 
     private GameObject magnifierToApply;
 
-    // [SerializeField] 
-    // private GameObject scissorsToApply; // change objects
+    [SerializeField] 
+    private GameObject showTheHighlight;
 
     [SerializeField]
     private GameObject footprintClue;
 
-    [SerializeField]
-    private GameObject toolClue;
-
-    public bool toolFound; // TODO: use later
-
     
     void Start ()
     {
-        toolFound = false;
         countObject = 0;
         placementIndicator = FindObjectOfType<PlacementIndicator>();
         planeManager = FindObjectOfType<ARPlaneManager>();
@@ -52,11 +43,9 @@ public class UseMagnifier : MonoBehaviour
             lastSpawnTime = Time.time;
             SpawnObjects(footprintClue);
             countObject = countObject + 1;           
-        }
-        else if (countObject == 4) // show the discovered tool to the user
-        {
-            toolFound = true;
-            SpawnObjects(toolClue);
+        // }
+        // else if (countObject == 4) //start to generate highlights
+        // {
         }
     }
 
@@ -66,6 +55,7 @@ public class UseMagnifier : MonoBehaviour
         {
             UnityEngine.Debug.Log("try to place" + countObject);
             GameObject obj = Instantiate(objs, placementIndicator.transform.position, placementIndicator.transform.rotation);
+
         }
         
     }

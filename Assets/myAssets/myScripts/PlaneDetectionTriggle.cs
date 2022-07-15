@@ -24,7 +24,6 @@ public class PlaneDetectionTriggle : MonoBehaviour
     private void Awake() 
     {
         planeManager = GetComponent<ARPlaneManager>();
-
     }
         
     //set the plane manager enbaled state to be its current opposite state
