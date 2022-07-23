@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -859,6 +859,9 @@ GameObject:
   m_Component:
   - component: {fileID: 952961560}
   - component: {fileID: 952961559}
+  - component: {fileID: 952961563}
+  - component: {fileID: 952961562}
+  - component: {fileID: 952961561}
   m_Layer: 0
   m_Name: PlacementIndicator
   m_TagString: Untagged
@@ -894,6 +897,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952961561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952961558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 0}
+  m_DetectionMode: -1
+--- !u!114 &952961562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952961558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 0}
+--- !u!114 &952961563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952961558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520bb47c46cf8624fafb307b7d1b862a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 0}
 --- !u!1 &1028845014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170fbdb2d0254431b8c0af91ecfd0acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 0}
+  hintToSpawn: {fileID: 0}
   objectToSpawn: {fileID: 743016953722197146, guid: 48bd4298c92604800aed057f09437aad, type: 3}
 --- !u!4 &1422299494
 Transform:
@@ -2059,7 +2104,7 @@ Transform:
   m_GameObject: {fileID: 2023154232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.000061035156, y: 0.000030517578, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2126967131}
@@ -2110,11 +2155,10 @@ MonoBehaviour:
   lastSpawnTime: 0
   countObject: 0
   planeManager: {fileID: 0}
-  placementIndicator: {fileID: 952961559}
+  placementIndicator: {fileID: 0}
   magnifierToApply: {fileID: 1558520220}
+  showTheHighlight: {fileID: 0}
   footprintClue: {fileID: 8576255438839006142, guid: fcc6aebff380244c5b78d37ab68d53c3, type: 3}
-  toolClue: {fileID: 2651130721178312163, guid: 885b913c6dd224c9a90e5eb2b537f68f, type: 3}
-  toolFound: 0
 --- !u!1 &2103671053
 GameObject:
   m_ObjectHideFlags: 0
