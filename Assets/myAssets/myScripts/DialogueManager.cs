@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
     public GameObject dialogueBox;
+    public GameObject startDialogueButton;
+    public GameObject startScanButton;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         // show GameObject DialogueBox
         FindObjectOfType<HideShow>().ShowObject(dialogueBox);
+        FindObjectOfType<HideShow>().HideObject(startDialogueButton);
 
         // start dialogue
         Debug.Log("Starting conversation with " + dialogue.name);
@@ -59,6 +62,7 @@ public class DialogueManager : MonoBehaviour
     {
         // hide GameObject DialogueBox
         FindObjectOfType<HideShow>().HideObject(dialogueBox);
+        FindObjectOfType<HideShow>().ShowObject(startScanButton);
 
         // end dialogue
         Debug.Log("End of conversation.");

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ARRaycastManager))] 
 [RequireComponent(typeof(ARPlaneManager))] 
@@ -74,5 +75,6 @@ public class UseScissors : MonoBehaviour
         UnityEngine.Debug.Log("try to replace");
         Instantiate(theSavedPenguin, objs.transform.position, objs.transform.rotation);
         Destroy(objs);
+        SceneManager.LoadScene("G4EndScene");
     }
 }

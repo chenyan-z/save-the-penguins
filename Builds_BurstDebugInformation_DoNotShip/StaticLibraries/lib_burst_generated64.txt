@@ -144,6 +144,7 @@ Library: lib_burst_generated64
 --generate-static-linkage-methods
 --output=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/StaticLibraries/lib_burst_generated64
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/UnityEngine.UI.dll
+--root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Mathematics.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.XR.ARFoundation.dll
@@ -160,7 +161,6 @@ Library: lib_burst_generated64
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.2D.Animation.Runtime.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Timeline.dll
---root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.XR.OpenXR.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll
 --root-assembly=/Users/chenyan_zhang/SaveThePenguin/Temp/StagingArea/Data/Managed/Unity.Services.Core.Internal.dll

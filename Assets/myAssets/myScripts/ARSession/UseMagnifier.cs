@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.SceneManagement;
 
 public class UseMagnifier : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class UseMagnifier : MonoBehaviour
         // else if (countObject == 4) //start to generate highlights
         // {
         }
+        SceneManager.LoadScene("G2CollectScissors");
     }
 
     private void SpawnObjects(GameObject objs)
@@ -54,7 +56,6 @@ public class UseMagnifier : MonoBehaviour
         {
             UnityEngine.Debug.Log("try to place" + countObject);
             GameObject obj = Instantiate(objs, placementIndicator.transform.position, placementIndicator.transform.rotation);
-
         }
         
     }

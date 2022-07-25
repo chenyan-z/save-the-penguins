@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.SceneManagement;
 
 public class ObjectSpawner : MonoBehaviour
 {
@@ -78,6 +79,7 @@ public class ObjectSpawner : MonoBehaviour
                 spawnedObject = null;
                 
                 // TODO: object collected!
+                SceneManager.LoadScene("G3Penguin");
             }
         }
     }
