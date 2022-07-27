@@ -42,11 +42,17 @@ public class AddFriendRequest : MonoBehaviour
                 }
                 else
                 {
-                    string query = mysql.Update("userinfo", "friendrequest", myUid, new string[] { "userid" }, new string[] { "=" }, new string[] { friendUid.text });
+                    /*string query = mysql.Update("userinfo", "friendrequest", myUid, new string[] { "userid" }, new string[] { "=" }, new string[] { friendUid.text });
                     //Debug.Log(query);
                     Debug.Log("Friend request sent successfully! " + "Uid" + myUid.ToString() + " wants to add " + "Uid" + friendUid.text);
                     MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
                     MySqlDataReader dataReader = cmd.ExecuteReader();
+                    dataReader.Close();*/
+
+                    string query = mysql.Insert("friendrequest", new string[] { "fromuid", "touid" }, new string[] { myUid, friendUid.text });
+                    MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    Debug.Log("Friend request sent successfully! " + "Uid" + myUid.ToString() + " wants to add " + "Uid" + friendUid.text);
                     dataReader.Close();
                 }
             }

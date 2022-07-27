@@ -67,12 +67,13 @@ public class AcceptRequestAndDestroy : MonoBehaviour
                     dataReader2.Close();
                     Debug.Log("Successful added.");
 
-                    string query3 = mysql.Update("userinfo", "friendrequest", "0", new string[] { "userid" }, new string[] { "=" }, new string[] { myUid });
+                    //string query3 = mysql.Update("userinfo", "friendrequest", "0", new string[] { "userid" }, new string[] { "=" }, new string[] { myUid });
                     //Debug.Log(query);
-                    Debug.Log("Friend request has been accepted successfully! " + "Uid" +friendRequest.uid.ToString() + " has been your friend now.");
+                    string query3 = mysql.Delete("friendrequest", new string[] {"`" + "fromuid" + "`", "`" + "touid" + "`"}, new string[] { "=", "=" }, new string[] { friendRequest.uid.ToString(), myUid });
                     MySqlCommand cmd3 = new MySqlCommand(query3, mysql.mySqlConnection);
                     MySqlDataReader dataReader3 = cmd3.ExecuteReader();
                     dataReader3.Close();
+                    Debug.Log("Friend request has been accepted successfully! " + "Uid" +friendRequest.uid.ToString() + " has been your friend now.");
                 }
             }
             mysql.CloseSql();
