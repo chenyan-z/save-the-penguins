@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class EndScene : MonoBehaviour
 {
-    public GameObject Map;
-    public GameObject Magnifier;
-    public GameObject Backpack;
+    public GameObject Canvas;
+    
     public GameObject Background;
 
     public void popEndScene()
     {
-        Map.SetActive(false);
-        Magnifier.SetActive(false);
-        Backpack.SetActive(false);
+        for (int i = 0; i < Canvas.transform.childCount; i++)
+        {
+        var child = Canvas.transform.GetChild(i).gameObject;
+        if (child != null)
+            child.SetActive(false);
+        }
+        
         Background.SetActive(true);
     }
 }
