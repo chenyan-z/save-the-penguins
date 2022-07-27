@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 33804061}
   - component: {fileID: 33804060}
   m_Layer: 5
-  m_Name: RegisterButton
+  m_Name: LoginButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,10 +220,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480483369}
-        m_TargetAssemblyTypeName: Register, Assembly-CSharp
-        m_MethodName: RegisterClick
+      - m_Target: {fileID: 1480483370}
+        m_TargetAssemblyTypeName: Login, Assembly-CSharp
+        m_MethodName: LoginClick
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Homepage
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 33804060}
+        m_TargetAssemblyTypeName: NavigateMenu, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2380,7 +2392,7 @@ GameObject:
   - component: {fileID: 2034428052}
   - component: {fileID: 2034428055}
   m_Layer: 5
-  m_Name: LoginButton
+  m_Name: RegisterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2451,10 +2463,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480483370}
-        m_TargetAssemblyTypeName: Login, Assembly-CSharp
-        m_MethodName: LoginClick
+      - m_Target: {fileID: 1480483369}
+        m_TargetAssemblyTypeName: Register, Assembly-CSharp
+        m_MethodName: RegisterClick
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Homepage
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2034428055}
+        m_TargetAssemblyTypeName: NavigateMenu, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
