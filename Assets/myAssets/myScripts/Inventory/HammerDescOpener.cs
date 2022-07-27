@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerOpener : MonoBehaviour
+public class HammerDescOpener : MonoBehaviour
 {
     [SerializeField] GameObject Inventory;
-    [SerializeField] GameObject ToolsParent;
-    [SerializeField] GameObject HammerButton;
+    [SerializeField] GameObject HammerDesc;
     [SerializeField] GameObject DescriptionParent;
 
-    public void OpenHammer()
+    public void OpenHammerDescription()
     {
         for (int i = 0; i < DescriptionParent.transform.childCount; i++)
         {
@@ -18,8 +17,8 @@ public class HammerOpener : MonoBehaviour
             child.SetActive(false);
         }
 
+        DescriptionParent.SetActive(true);
         Inventory.SetActive(false);
-        ToolsParent.SetActive(true);
-        HammerButton.SetActive(true);
+        HammerDesc.SetActive(true);
     }
 }
