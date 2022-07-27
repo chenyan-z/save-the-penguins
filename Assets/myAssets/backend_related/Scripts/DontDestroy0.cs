@@ -6,7 +6,7 @@ public class DontDestroy0 : MonoBehaviour
 {
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("RegistrationTag");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("GalleryTag");
 
         if (objs.Length > 1) 
         {
