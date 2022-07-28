@@ -13,9 +13,15 @@ public class HammerOpener : MonoBehaviour
 
     public void OpenHammer()
     {
+        for (int i = 0; i < DescriptionParent.transform.childCount; i++)
+        {
+        var child = DescriptionParent.transform.GetChild(i).gameObject;
+        if (child != null)
+            child.SetActive(false);
+        }
+
         Inventory.SetActive(false);
         ToolsParent.SetActive(true);
-        CloseButton.SetActive(true);
         HammerButton.SetActive(true);
 
         ScissorsButton.SetActive(false);

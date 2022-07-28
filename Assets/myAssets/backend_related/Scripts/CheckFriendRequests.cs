@@ -30,7 +30,8 @@ public class CheckFriendRequests : MonoBehaviour
 
     // required input data for this script
     public string myUid;
-    public Friend friendRequest;
+    //public Friend friendRequest;
+    public Friends friendRequests;
 
     private void Start()
     {
@@ -44,31 +45,42 @@ public class CheckFriendRequests : MonoBehaviour
         if (myUid != "-1")
         {
             mysql.OpenSql();
-            DataSet queryResult = mysql.Select("userinfo", new string[] { "friendrequest" }, new string[] {"`" + "userid" + "`"}, new string[] { "=" }, new string[] { myUid });
+            //DataSet queryResult = mysql.Select("userinfo", new string[] { "friendrequest" }, new string[] {"`" + "userid" + "`"}, new string[] { "=" }, new string[] { myUid });
+            DataSet queryResult = mysql.Select("friendrequest", new string[] { "fromuid" }, new string[] {"`" + "touid" + "`"}, new string[] { "=" }, new string[] { myUid });
             if (queryResult != null)
             {
                 DataTable table = queryResult.Tables[0];
-                if (table.Rows.Count > 0 && (int)table.Rows[0][0] != 0)
+                if (table.Rows.Count > 0)
                 {
-                    DataSet queryFriend = mysql.Select("userinfo", new string[] { "username", "picid" }, new string[] {"`" + "userid" + "`"}, new string[] { "=" }, new string[] { table.Rows[0][0].ToString() });
-                    if (queryFriend != null)
+                    friendRequests.friends = new Friend[table.Rows.Count];
+                    for (int i = 0; i < table.Rows.Count; i++)
                     {
-                        //uid
-                        friendRequest.uid = (int)table.Rows[0][0];
-                        //username
-                        friendRequest.friendName = queryFriend.Tables[0].Rows[0][0].ToString();
-                        //picid
-                        friendRequest.picid = (int)queryFriend.Tables[0].Rows[0][1];
+                        Debug.Log("now is friend uid:" + table.Rows[i][0].ToString());
+                        DataSet queryFriend = mysql.Select("userinfo", new string[] { "username", "picid" }, new string[] {"`" + "userid" + "`"}, new string[] { "=" }, new string[] { table.Rows[i][0].ToString() });
+                        if (queryFriend != null)
+                        {
+                            Friend friendRequest = new Friend();
+                            //uid
+                            friendRequest.uid = (int)table.Rows[i][0];
+                            //username
+                            friendRequest.friendName = queryFriend.Tables[0].Rows[0][0].ToString();
+                            //picid
+                            friendRequest.picid = (int)queryFriend.Tables[0].Rows[0][1];
+                            friendRequests.friends[i] = friendRequest;
+                        }
+                        // see console output to make sure myFriends stores the current information
                     }
-                    // see console output to make sure myFriends stores the current information
-                    Debug.Log(friendRequest.uid);
-                    Debug.Log(friendRequest.friendName);
-                    Debug.Log(friendRequest.picid);
+                    for (int i = 0; i < table.Rows.Count; i++)
+                    {
+                        Debug.Log(friendRequests.friends[i].uid);
+                        Debug.Log(friendRequests.friends[i].friendName);
+                        Debug.Log(friendRequests.friends[i].picid);
+                    }
                 }
                 else
                 {
                     Debug.Log("No friend requests.");
-                    Debug.Log((friendRequest.uid).ToString());
+                    //Debug.Log((friendRequest.uid).ToString());
                 }
             }
             mysql.CloseSql();

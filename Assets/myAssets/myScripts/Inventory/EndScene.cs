@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class EndScene : MonoBehaviour
 {
-    public GameObject Radar;
-    public GameObject Magnifier;
-    public GameObject Backpack;
+    public GameObject Canvas;
+    
     public GameObject Background;
     public GameObject Scissors;
 
     public void popEndScene()
     {
-        Radar.SetActive(false);
-        Magnifier.SetActive(false);
-        Backpack.SetActive(false);
-        Scissors.SetActive(false);
+        for (int i = 0; i < Canvas.transform.childCount; i++)
+        {
+        var child = Canvas.transform.GetChild(i).gameObject;
+        if (child != null)
+            child.SetActive(false);
+        }
+        
         Background.SetActive(true);
     }
 }
