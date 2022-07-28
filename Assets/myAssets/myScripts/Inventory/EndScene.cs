@@ -7,6 +7,7 @@ public class EndScene : MonoBehaviour
     public GameObject Canvas;
     
     public GameObject Background;
+    public GameObject Scissors;
 
     public void popEndScene()
     {

@@ -144,6 +144,7 @@ Library: lib_burst_generated64
 --generate-static-linkage-methods
 --output=/Users/kexin/save-the-penguins/Temp/StagingArea/StaticLibraries/lib_burst_generated64
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/UnityEngine.UI.dll
+--root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.Mathematics.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.XR.ARFoundation.dll
@@ -155,7 +156,6 @@ Library: lib_burst_generated64
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.XR.ARKit.FaceTracking.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll
---root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.Internal.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.Burst.dll
 --root-assembly=/Users/kexin/save-the-penguins/Temp/StagingArea/Data/Managed/Unity.2D.Animation.Runtime.dll
