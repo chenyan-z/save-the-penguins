@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TorchOpener : MonoBehaviour
 {
-    [SerializeField] GameObject Inventory;
-    [SerializeField] GameObject ToolsParent;
-    [SerializeField] GameObject TorchButton;
-    [SerializeField] GameObject DescriptionParent;
+    public GameObject Inventory;
+    public GameObject ToolsParent;
+    public GameObject CloseButton;
+    public GameObject ScissorsButton;
+    public GameObject HammerButton;
+    public GameObject TorchButton;
 
     public void OpenTorch()
     {
@@ -21,5 +23,8 @@ public class TorchOpener : MonoBehaviour
         Inventory.SetActive(false);
         ToolsParent.SetActive(true);
         TorchButton.SetActive(true);
+
+        ScissorsButton.SetActive(false);
+        HammerButton.SetActive(false); 
     }
 }
