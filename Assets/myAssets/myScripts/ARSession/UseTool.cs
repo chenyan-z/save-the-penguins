@@ -108,6 +108,7 @@ public class UseTool : MonoBehaviour
         applied = true; // already used a tool, cannot place another penguin.
         ReplaceObjects(objPenguinRope, CardId); 
         TalkCaptain(CardId);
+        
     }
 
     private void ReplaceObjects(GameObject objs, int penguinId)
