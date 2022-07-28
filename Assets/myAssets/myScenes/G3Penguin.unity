@@ -2245,7 +2245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &612073218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3201,6 +3201,9 @@ MonoBehaviour:
   - {fileID: 690731559}
   - {fileID: 2012397105}
   penguinOnFireCard: {fileID: 690731559}
+  dialogueSuccess: {fileID: 2114171572}
+  dialogueTorch: {fileID: 1387170363}
+  dialogueHammer: {fileID: 612073217}
 --- !u!1 &966084462
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,7 +5345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1387170364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7486,7 +7489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2114171573
 RectTransform:
   m_ObjectHideFlags: 0
