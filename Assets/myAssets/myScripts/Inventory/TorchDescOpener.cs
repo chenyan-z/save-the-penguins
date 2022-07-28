@@ -22,3 +22,4 @@ public class TorchDescOpener : MonoBehaviour
         TorchDesc.SetActive(true);
     }
 }
+

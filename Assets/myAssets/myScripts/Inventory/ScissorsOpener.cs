@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ScissorsOpener : MonoBehaviour
 {
-    public GameObject Inventory;
-    public GameObject ToolsParent;
-    public GameObject CloseButton;
-    public GameObject ScissorsButton;
-    public GameObject HammerButton;
-    public GameObject TorchButton;
+    [SerializeField] GameObject Inventory;
+    [SerializeField] GameObject ToolsParent;
+    [SerializeField] GameObject ScissorsButton;
+    [SerializeField] GameObject DescriptionParent;
 
     public void OpenScissors()
     {
@@ -23,8 +21,5 @@ public class ScissorsOpener : MonoBehaviour
         Inventory.SetActive(false);
         ToolsParent.SetActive(true);
         ScissorsButton.SetActive(true);
-
-        HammerButton.SetActive(false);
-        TorchButton.SetActive(false);
     }
 }

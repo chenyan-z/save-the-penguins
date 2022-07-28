@@ -18,7 +18,8 @@ public class UseTool : MonoBehaviour
     
 
     private bool saved = false; // only used scissors can save the penguin
-    public int CardId = -1;
+    private bool applied = false;
+    public int CardId = -1; //default value, 0:happy penguin, 1: fire penguin, 2: hit penguin
 
     private Vector2 touchPosition = default;
 
@@ -28,25 +29,20 @@ public class UseTool : MonoBehaviour
     private PlacementIndicator placementIndicator;
 
     [SerializeField] 
-    private GameObject toolsToApply; // change objects
-
-    [SerializeField]
-    private GameObject[] penguinCards;
+    private GameObject toolsToApply; 
 
     [SerializeField]
     private GameObject thePenguinWithRope;
 
     [SerializeField]
-    private GameObject happyPenguin;
+    private GameObject[] theSavedPenguin;
 
     [SerializeField]
-    private GameObject[] theSavedPenguin;
+    private GameObject[] penguinCards;
 
     [SerializeField]
     private GameObject penguinOnFireCard;
 
-    [SerializeField]
-    private GameObject closeBtn;
     
     void Start ()
     {
@@ -56,7 +52,7 @@ public class UseTool : MonoBehaviour
 
     void Update() 
     {
-            if(objPenguinRope == null && saved == false && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            if(objPenguinRope == null && saved == false && applied == false && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 // UnityEngine.Debug.Log("enter if");
                 List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -71,46 +67,29 @@ public class UseTool : MonoBehaviour
                 List<ARRaycastHit> hits = new List<ARRaycastHit>();
                 raycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.PlaneWithinBounds);
             }
-
-    } 
-
-
-    private IEnumerator Wait()
-    {
-        UnityEngine.Debug.Log("inside Wait()");
-        if(CardId != -1)
-        {
-            UnityEngine.Debug.Log("show cards");
-            yield return new WaitForSecondsRealtime(4); // wait for 4 second
-            penguinOnFireCard.SetActive(true);
-            closeBtn.SetActive(true);
-        }
     }
 
     public void ApplyTool()
     {
         // LeanTweenExt.LeanMoveLocal(scissorsToApply, placementIndicator.transform.position,1).setEaseOutQuart().setLoopPingPong(1);
         //scissorsToApply.transform.LeanMoveLocal(placementIndicator.transform.position,0.5).setEaseOutQuart().setLoopPingPong(1);
-        // 可以在这个地方加入拖拽的feature！
+
         UnityEngine.Debug.Log("tap tool");  
         if(GameObject.Find("ScissorsButton") != null)
         {       
             UnityEngine.Debug.Log("use Scissors");
-            ReplaceObjects(objPenguinRope, 0);
             CardId = 0;
             saved = true;
         }
         else if(GameObject.Find("TorchButton") != null)
         {
             UnityEngine.Debug.Log("use Torch");
-            ReplaceObjects(objPenguinRope, 1);
             CardId = 1;
             saved = false;
         }
         else if(GameObject.Find("HammerButton") != null)
         {
             UnityEngine.Debug.Log("use Hammer");
-            ReplaceObjects(objPenguinRope, 2);
             CardId = 2;
             saved = false;
         }
@@ -118,8 +97,10 @@ public class UseTool : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(Wait());
-        // DisplayCard(CardId);   
+        applied = true; // already used a tool, cannot place another penguin.
+        ReplaceObjects(objPenguinRope, CardId); 
+
+        //应该要触发captain对话
     }
 
     private void ReplaceObjects(GameObject objs, int penguinId)
@@ -154,7 +135,6 @@ public class UseTool : MonoBehaviour
         {
             case 0:
                 UnityEngine.Debug.Log("Card1");
-                
                 break;
             case 1:
                 UnityEngine.Debug.Log("Card2");

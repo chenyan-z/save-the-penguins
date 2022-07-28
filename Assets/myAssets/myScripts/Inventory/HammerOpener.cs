@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class HammerOpener : MonoBehaviour
 {
-    public GameObject Inventory;
-    public GameObject ToolsParent;
-    public GameObject CloseButton;
-    public GameObject ScissorsButton;
-    public GameObject HammerButton;
-    public GameObject TorchButton;
+    [SerializeField] GameObject Inventory;
+    [SerializeField] GameObject ToolsParent;
+    [SerializeField] GameObject HammerButton;
+    [SerializeField] GameObject DescriptionParent;
 
     public void OpenHammer()
     {
@@ -23,8 +21,5 @@ public class HammerOpener : MonoBehaviour
         Inventory.SetActive(false);
         ToolsParent.SetActive(true);
         HammerButton.SetActive(true);
-
-        ScissorsButton.SetActive(false);
-        TorchButton.SetActive(false);        
     }
 }
