@@ -43,6 +43,14 @@ public class UseTool : MonoBehaviour
     [SerializeField]
     private GameObject penguinOnFireCard;
 
+    [SerializeField]
+    private GameObject dialogueSuccess;
+
+    [SerializeField]
+    private GameObject dialogueTorch;
+
+    [SerializeField]
+    private GameObject dialogueHammer;
     
     void Start ()
     {
@@ -99,8 +107,8 @@ public class UseTool : MonoBehaviour
         }
         applied = true; // already used a tool, cannot place another penguin.
         ReplaceObjects(objPenguinRope, CardId); 
-
-        //应该要触发captain对话
+        TalkCaptain(CardId);
+        
     }
 
     private void ReplaceObjects(GameObject objs, int penguinId)
@@ -125,7 +133,29 @@ public class UseTool : MonoBehaviour
                 break;
         }
         Destroy(objs);
-        SceneManager.LoadScene("G4EndScene");
+        // SceneManager.LoadScene("G4EndScene");
+    }
+
+    private void TalkCaptain(int endingId)
+    {
+        UnityEngine.Debug.Log("talk to captain");
+        switch(endingId)
+        {
+            case 0:
+                UnityEngine.Debug.Log("talk & win the game");
+                dialogueSuccess.SetActive(true);
+                break;
+            case 1:
+                UnityEngine.Debug.Log("talk & fail 1");
+                dialogueTorch.SetActive(true);
+                break;
+            case 2:
+                UnityEngine.Debug.Log("talk & fail 2");
+                dialogueHammer.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 
     private void DisplayCard(int cardId)
@@ -146,4 +176,6 @@ public class UseTool : MonoBehaviour
                 break;
         }
     }
+
+    // public function to change scene
 }
