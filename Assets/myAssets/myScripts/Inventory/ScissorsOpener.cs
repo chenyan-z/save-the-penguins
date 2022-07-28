@@ -8,6 +8,8 @@ public class ScissorsOpener : MonoBehaviour
     public GameObject ToolsParent;
     public GameObject CloseButton;
     public GameObject ScissorsButton;
+    public GameObject HammerButton;
+    public GameObject TorchButton;
 
     public void OpenScissors()
     {
@@ -15,5 +17,8 @@ public class ScissorsOpener : MonoBehaviour
         ToolsParent.SetActive(true);
         CloseButton.SetActive(true);
         ScissorsButton.SetActive(true);
+
+        HammerButton.SetActive(false);
+        TorchButton.SetActive(false);
     }
 }

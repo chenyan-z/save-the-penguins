@@ -7,7 +7,9 @@ public class HammerOpener : MonoBehaviour
     public GameObject Inventory;
     public GameObject ToolsParent;
     public GameObject CloseButton;
+    public GameObject ScissorsButton;
     public GameObject HammerButton;
+    public GameObject TorchButton;
 
     public void OpenHammer()
     {
@@ -15,5 +17,8 @@ public class HammerOpener : MonoBehaviour
         ToolsParent.SetActive(true);
         CloseButton.SetActive(true);
         HammerButton.SetActive(true);
+
+        ScissorsButton.SetActive(false);
+        TorchButton.SetActive(false);        
     }
 }

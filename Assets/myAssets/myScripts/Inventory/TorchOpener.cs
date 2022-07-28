@@ -7,6 +7,8 @@ public class TorchOpener : MonoBehaviour
     public GameObject Inventory;
     public GameObject ToolsParent;
     public GameObject CloseButton;
+    public GameObject ScissorsButton;
+    public GameObject HammerButton;
     public GameObject TorchButton;
 
     public void OpenTorch()
@@ -15,5 +17,8 @@ public class TorchOpener : MonoBehaviour
         ToolsParent.SetActive(true);
         CloseButton.SetActive(true);
         TorchButton.SetActive(true);
+
+        ScissorsButton.SetActive(false);
+        HammerButton.SetActive(false); 
     }
 }
