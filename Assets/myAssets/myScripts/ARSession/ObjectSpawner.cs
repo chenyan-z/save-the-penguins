@@ -79,7 +79,7 @@ public class ObjectSpawner : MonoBehaviour
                 spawnedObject = null;
                 
                 // TODO: object collected!
-                SceneManager.LoadScene("G3Penguin");
+                // SceneManager.LoadScene("G3Penguin");
             }
         }
     }

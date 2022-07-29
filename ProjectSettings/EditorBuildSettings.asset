@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/myAssets/myScenes/Homepage.unity
     guid: 8574b8ff5a6d742ce9bd4a5f2be77768
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/GameMenu.unity
     guid: 1cd7430fd62fb49b0a4ba778df6c5405
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/G0Dialogue.unity
     guid: c01ea8fed332e413096790389e953626
   - enabled: 0
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/myAssets/myScenes/AddFriends.unity
     guid: 52cf0feeb0a9340c9bab4c6da03e7d38
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/G1FindClue.unity
     guid: d6e2932c7c0a24bd8b64eee6fe7e796e
   - enabled: 1
@@ -47,10 +47,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/myAssets/myScenes/Gallery2Model.unity
     guid: c3431d04701a84682a5dacde79d07f36
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/G3Penguin.unity
     guid: 58e06a7b7db9a4fe8817258ddfed8463
-  - enabled: 1
+  - enabled: 0
     path: Assets/myAssets/myScenes/G4EndScene.unity
     guid: 2977539c52df447c8a80773091c4605f
   m_configObjects:
