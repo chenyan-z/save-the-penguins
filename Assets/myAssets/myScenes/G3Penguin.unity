@@ -3490,9 +3490,9 @@ MonoBehaviour:
   dialogueSuccess: {fileID: 2114171572}
   dialogueTorch: {fileID: 1387170363}
   dialogueHammer: {fileID: 612073217}
-  cardSuccess: {fileID: 0}
-  cardTorch: {fileID: 0}
-  cardHammer: {fileID: 0}
+  cardSuccess: {fileID: 999554146}
+  cardTorch: {fileID: 1760132068}
+  cardHammer: {fileID: 1144278894}
 --- !u!1 &966084462
 GameObject:
   m_ObjectHideFlags: 0
