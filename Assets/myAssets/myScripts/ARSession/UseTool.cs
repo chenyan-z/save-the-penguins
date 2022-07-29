@@ -51,6 +51,15 @@ public class UseTool : MonoBehaviour
 
     [SerializeField]
     private GameObject dialogueHammer;
+
+    [SerializeField]
+    private GameObject cardSuccess;
+
+    [SerializeField]
+    private GameObject cardTorch;
+
+    [SerializeField]
+    private GameObject cardHammer;
     
     void Start ()
     {
@@ -158,19 +167,26 @@ public class UseTool : MonoBehaviour
         }
     }
 
-    private void DisplayCard(int cardId)
+    public void DisplayCard(int cardId)
     {
+        dialogueSuccess.SetActive(false);
+        dialogueTorch.SetActive(false);
+        dialogueHammer.SetActive(false);
+
         UnityEngine.Debug.Log("show card");
         switch(cardId)
         {
             case 0:
                 UnityEngine.Debug.Log("Card1");
+                cardSuccess.SetActive(true);
                 break;
             case 1:
                 UnityEngine.Debug.Log("Card2");
+                cardTorch.SetActive(true);
                 break;
             case 2:
                 UnityEngine.Debug.Log("Card3");
+                cardHammer.SetActive(true);
                 break;
             default:
                 break;
