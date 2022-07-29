@@ -15,9 +15,6 @@ public class UseMagnifier : MonoBehaviour
     [SerializeField]
     private ARPlaneManager planeManager;
 
-    [SerializeField]
-    private PlacementIndicator placementIndicator;
-
     [SerializeField] 
     GameObject magnifierToApply;
     [SerializeField]
@@ -30,6 +27,7 @@ public class UseMagnifier : MonoBehaviour
     private GameObject spawnedObject;
     private GameObject spawnedHint;
     Camera arCam;
+    private PlacementIndicator placementIndicator;
 
     [SerializeField]
     ARRaycastManager rayManager;
@@ -40,6 +38,9 @@ public class UseMagnifier : MonoBehaviour
         countObject = 0;
         hinted = false;
         spawnedHint = null;
+        spawnedObject = null;
+        arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
+        placementIndicator = FindObjectOfType<PlacementIndicator>();
     }
 
     void Update ()
@@ -58,13 +59,14 @@ public class UseMagnifier : MonoBehaviour
         
         RaycastHit hit;
         Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
-        if (rayManager.Raycast(Input.GetTouch(0).position, hits))
-        {
+        if (rayManager.Raycast(Input.GetTouch(0).position, hits) && countObject > 4)
+        {   
+            UnityEngine.Debug.Log("enter if");
             if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
             {
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "Scissors")
+                    if (hit.collider.gameObject.tag == "bag")
                     {
                         spawnedObject = hit.collider.gameObject;
                     }
