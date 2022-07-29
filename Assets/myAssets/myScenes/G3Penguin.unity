@@ -1975,9 +1975,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 518116735}
-        m_TargetAssemblyTypeName: CloseCard, Assembly-CSharp
-        m_MethodName: CloseCardContent
+      - m_Target: {fileID: 945091189}
+        m_TargetAssemblyTypeName: UseTool, Assembly-CSharp
+        m_MethodName: EndScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3201,9 +3201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 887542009}
-        m_TargetAssemblyTypeName: CloseCard, Assembly-CSharp
-        m_MethodName: CloseCardContent
+      - m_Target: {fileID: 945091189}
+        m_TargetAssemblyTypeName: UseTool, Assembly-CSharp
+        m_MethodName: FailGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8135,9 +8135,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2145674979}
-        m_TargetAssemblyTypeName: CloseCard, Assembly-CSharp
-        m_MethodName: CloseCardContent
+      - m_Target: {fileID: 945091189}
+        m_TargetAssemblyTypeName: UseTool, Assembly-CSharp
+        m_MethodName: FailGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -193,5 +193,15 @@ public class UseTool : MonoBehaviour
         }
     }
 
-    // public function to change scene
+    public void EndScene()
+    {
+        UnityEngine.Debug.Log("load end scene");
+        SceneManager.LoadScene("G4EndScene");
+    }
+
+    public void FailGame()
+    {
+        UnityEngine.Debug.Log("failed game, back to level choosing");
+        SceneManager.LoadScene("GameMenu");        
+    }
 }
