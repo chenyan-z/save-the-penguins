@@ -2689,7 +2689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1355368371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3741,13 +3741,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastSpawnTime: 0
   hinted: 0
+  collectBackpack: 0
   countObject: 0
   planeManager: {fileID: 1617176185}
-  placementIndicator: {fileID: 1275898563}
   magnifierToApply: {fileID: 1030715537}
   hintToSpawn: {fileID: 2391944792033716317, guid: 2c22a390a21284643826eef756a1c355, type: 3}
   footprintClue: {fileID: 4908204638573368788, guid: b11c56beff8a447f693a792710ac1108, type: 3}
   objectToSpawn: {fileID: 8831906718267300061, guid: 80eee115e5cab40069d298ab76f5676d, type: 3}
+  backpackUI: {fileID: 1355368370}
   rayManager: {fileID: 1617176183}
 --- !u!114 &1617176185
 MonoBehaviour:

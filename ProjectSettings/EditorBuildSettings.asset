@@ -47,10 +47,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/myAssets/myScenes/Gallery2Model.unity
     guid: c3431d04701a84682a5dacde79d07f36
-  - enabled: 0
+  - enabled: 1
     path: Assets/myAssets/myScenes/G3Penguin.unity
     guid: 58e06a7b7db9a4fe8817258ddfed8463
-  - enabled: 0
+  - enabled: 1
     path: Assets/myAssets/myScenes/G4EndScene.unity
     guid: 2977539c52df447c8a80773091c4605f
   m_configObjects:

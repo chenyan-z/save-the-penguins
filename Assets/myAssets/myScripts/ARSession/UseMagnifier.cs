@@ -10,6 +10,7 @@ public class UseMagnifier : MonoBehaviour
 {
     public float lastSpawnTime;
     public bool hinted;
+    public bool collectBackpack;
     public int countObject;
 
     [SerializeField]
@@ -23,6 +24,8 @@ public class UseMagnifier : MonoBehaviour
     private GameObject footprintClue;
     [SerializeField]
     private GameObject objectToSpawn;
+    [SerializeField]
+    private GameObject backpackUI;
 
     private GameObject spawnedObject;
     private GameObject spawnedHint;
@@ -37,6 +40,7 @@ public class UseMagnifier : MonoBehaviour
     {
         countObject = 0;
         hinted = false;
+        collectBackpack = false;
         spawnedHint = null;
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
@@ -46,8 +50,9 @@ public class UseMagnifier : MonoBehaviour
     void Update ()
     {
         if (Input.touchCount == 0)
+        {
             return;
-        
+        }
         // on touch:
         // use magnifier to place the hint.
         // if (!hinted && Input.GetTouch(0).phase == TouchPhase.Began){ // if not hinted yet, generate hint
@@ -82,15 +87,27 @@ public class UseMagnifier : MonoBehaviour
             }
             else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
             {
-                spawnedObject.transform.position = hits[0].pose.position;
+                if(!collectBackpack) // haven't collected the backpack
+                {
+                    UnityEngine.Debug.Log("haven't collected!!!!");
+                    spawnedObject.transform.position = hits[0].pose.position;
+                }
+               
             }
-
             if (Input.GetTouch(0).phase == TouchPhase.Ended){
                 Destroy(spawnedObject);
                 spawnedObject = null;
-                
+                backpackUI.SetActive(true);
+                collectBackpack = true;
+                UnityEngine.Debug.Log("destory & collected");
                 // TODO: object collected!
                 // SceneManager.LoadScene("G3Penguin");
+            }
+
+            if(collectBackpack && countObject == 8)
+            {
+                UnityEngine.Debug.Log("transit");
+                SceneManager.LoadScene("G3Penguin");
             }
         }
     }
@@ -112,6 +129,16 @@ public class UseMagnifier : MonoBehaviour
             spawnedHint = Instantiate(hintToSpawn, placementIndicator.transform.position, placementIndicator.transform.rotation);
             hinted = true;
             countObject = countObject + 1;
+        }
+        else if (collectBackpack)
+        {
+            UnityEngine.Debug.Log("2nd round revealing clues");
+            if(Time.time >= lastSpawnTime + 5f && (countObject < 8))
+            {
+                lastSpawnTime = Time.time;
+                SpawnObjects(footprintClue);
+                countObject = countObject + 1;
+            }
         }
         // SceneManager.LoadScene("G2CollectScissors");
     }
