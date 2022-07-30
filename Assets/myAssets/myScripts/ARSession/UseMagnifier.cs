@@ -94,7 +94,7 @@ public class UseMagnifier : MonoBehaviour
                 }
                
             }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended){
+            if (Input.GetTouch(0).phase == TouchPhase.Ended && spawnedObject != null){
                 Destroy(spawnedObject);
                 spawnedObject = null;
                 backpackUI.SetActive(true);
