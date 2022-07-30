@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1184,13 +1184,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Score:\t\t10,200\nTime:\t\t2'15\""
+  m_Text: Penguin is safe!
 --- !u!222 &1075912481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1557,6 +1557,7 @@ GameObject:
   - component: {fileID: 1556177368}
   - component: {fileID: 1556177367}
   - component: {fileID: 1556177366}
+  - component: {fileID: 1556177369}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1628,7 +1629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1556177367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1556177369}
+        m_TargetAssemblyTypeName: BackToHome, Assembly-CSharp
+        m_MethodName: BackToHomePage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1556177367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +1680,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556177364}
   m_CullTransparentMesh: 1
+--- !u!114 &1556177369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556177364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa9728d206d64038b5f90792f830a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579726278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +1971,7 @@ GameObject:
   - component: {fileID: 1730111685}
   - component: {fileID: 1730111684}
   - component: {fileID: 1730111683}
+  - component: {fileID: 1730111686}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -2017,7 +2043,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1730111684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1730111686}
+        m_TargetAssemblyTypeName: BackToLevel, Assembly-CSharp
+        m_MethodName: BackToGameLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1730111684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,6 +2094,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730111681}
   m_CullTransparentMesh: 1
+--- !u!114 &1730111686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730111681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d16e9a10c1df495d92b5278a0ba7e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023154232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,8 +2310,8 @@ RectTransform:
   m_GameObject: {fileID: 2081211258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1598611076}
   - {fileID: 731174942}
