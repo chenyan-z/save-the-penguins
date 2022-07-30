@@ -16,6 +16,7 @@ public class Login : MonoBehaviour
      // required input data for this script
     public GameObject loginname;
     public GameObject loginpassword;
+    public GameObject loginError;
     public int uid = -1;
 
     private void Start()
@@ -45,6 +46,7 @@ public class Login : MonoBehaviour
             }
         }
         Debug.Log("Current scene: Login Page. Login failed.");
+        loginError.SetActive(true);
         mysql.CloseSql();
     }
 }
