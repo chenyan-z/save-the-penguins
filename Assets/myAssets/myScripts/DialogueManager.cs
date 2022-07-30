@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // chenyan don't know why I only have TextMeshPro object (no text) in my unity object
              // forcing me using TMPro to drag to inspector
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class DialogueManager : MonoBehaviour
         // hide GameObject DialogueBox
         FindObjectOfType<HideShow>().HideObject(dialogueBox);
         FindObjectOfType<HideShow>().ShowObject(startScanButton);
-
+        SceneManager.LoadScene("G2CollectScissors");
         // end dialogue
         Debug.Log("End of conversation.");
     }

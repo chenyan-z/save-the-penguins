@@ -67,7 +67,7 @@ public class UseMagnifier : MonoBehaviour
         if (rayManager.Raycast(Input.GetTouch(0).position, hits) && countObject > 4)
         {   
             UnityEngine.Debug.Log("enter if");
-            if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
+            if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null && !collectBackpack)
             {
                 if (Physics.Raycast(ray, out hit))
                 {
@@ -116,10 +116,8 @@ public class UseMagnifier : MonoBehaviour
     public void ApplyMagnifier()
     {
         magnifierToApply.transform.LeanMoveLocal(placementIndicator.transform.position,1).setEaseOutQuart().setLoopPingPong(1);
-        // -------TO DO later: add pobability manager to set probability for the object to be generated
         if(Time.time >= lastSpawnTime + 5f && countObject < 4) //spawn footprint after 5s since last placement
         {
-        // -------TO DO later: add pop out chat box to notify user to open the detector to find the footprints.
             lastSpawnTime = Time.time;
             SpawnObjects(footprintClue);
             countObject = countObject + 1;           
