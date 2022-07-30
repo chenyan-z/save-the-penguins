@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3384,12 +3384,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastSpawnTime: 0
+  hinted: 0
+  collectBackpack: 0
   countObject: 0
   planeManager: {fileID: 945091186}
-  placementIndicator: {fileID: 0}
   magnifierToApply: {fileID: 0}
-  showTheHighlight: {fileID: 0}
+  hintToSpawn: {fileID: 0}
   footprintClue: {fileID: 4908204638573368788, guid: b11c56beff8a447f693a792710ac1108, type: 3}
+  objectToSpawn: {fileID: 0}
+  backpackUI: {fileID: 0}
+  rayManager: {fileID: 0}
 --- !u!114 &945091184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,7 +3485,7 @@ MonoBehaviour:
   theSavedPenguin:
   - {fileID: 5221636678028508169, guid: 551a68c2fc039418c82601847e4018f9, type: 3}
   - {fileID: 533312410090069541, guid: 765b667e97e1240669959233f5af3c44, type: 3}
-  - {fileID: 4679274176977957559, guid: 67588c05279054ae386a9bfa2c135e63, type: 3}
+  - {fileID: 8731105568841259747, guid: e1963d03c12c24a71994e4ff878d0a3c, type: 3}
   penguinCards:
   - {fileID: 1235786760}
   - {fileID: 690731559}
