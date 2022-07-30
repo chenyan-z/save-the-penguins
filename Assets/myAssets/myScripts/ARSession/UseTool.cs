@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.SceneManagement;
+using MySql.Data.MySqlClient; // database related
 
 [RequireComponent(typeof(ARRaycastManager))] 
 [RequireComponent(typeof(ARPlaneManager))] 
@@ -22,6 +23,16 @@ public class UseTool : MonoBehaviour
     public int CardId = -1; //default value, 0:happy penguin, 1: fire penguin, 2: hit penguin
 
     private Vector2 touchPosition = default;
+
+    // database related
+    private string host = "120.77.148.135";
+    private string port = "3306";     
+    private string userName = "root";
+    private string password = "penguinspy123456";
+    private string databaseName = "penguintest";
+    private MySqlAccess mysql;
+    public string myUid;
+
 
     // private GameObject toolToApply;
 
@@ -65,6 +76,10 @@ public class UseTool : MonoBehaviour
     {
         raycastManager = GetComponent<ARRaycastManager>();
         planeManager = GetComponent<ARPlaneManager>();
+        // database related
+        myUid = GameObject.FindGameObjectWithTag("RegistrationTag").GetComponent<Login>().uid.ToString();
+        mysql = new MySqlAccess(host, port, userName, password, databaseName);
+        // Debug.Log("Current scene: DummyGameScene. Current userid: " + myUid.ToString());
     }
 
     void Update() 
@@ -191,6 +206,15 @@ public class UseTool : MonoBehaviour
             default:
                 break;
         }
+        // databse related
+        mysql.OpenSql();
+        string query = mysql.Update("userinfo", "penguin" + cardId.ToString(), "1", new string[] { "userid" }, new string[] { "=" }, new string[] { myUid });
+        //Debug.Log(query);
+        Debug.Log("Congradulation! " + "Uid" + myUid.ToString() + " has " + "penguin" + cardId.ToString() + " now! ");
+        MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
+        MySqlDataReader dataReader = cmd.ExecuteReader();
+        dataReader.Close();
+        mysql.CloseSql();
     }
 
     public void EndScene()
