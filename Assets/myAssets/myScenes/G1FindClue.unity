@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9485a9d750e974cb99c5224c5d5abf78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59b80b6de6e19c440b78d1c0cc69afa4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2778,12 +2778,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastSpawnTime: 0
+  hinted: 0
+  collectBackpack: 0
   countObject: 0
   planeManager: {fileID: 1425870808}
-  placementIndicator: {fileID: 1296040364}
   magnifierToApply: {fileID: 713104395}
-  showTheHighlight: {fileID: 0}
+  hintToSpawn: {fileID: 0}
   footprintClue: {fileID: 4908204638573368788, guid: b11c56beff8a447f693a792710ac1108, type: 3}
+  objectToSpawn: {fileID: 0}
+  backpackUI: {fileID: 0}
+  rayManager: {fileID: 0}
 --- !u!1 &1429767976
 GameObject:
   m_ObjectHideFlags: 0
