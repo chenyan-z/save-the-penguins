@@ -50,11 +50,12 @@ public class DeclineRequestAndDestroy : MonoBehaviour
                 else
                 {
                     Debug.Log("You have declined the request.");
-                    string query = mysql.Update("userinfo", "friendrequest", "0", new string[] { "userid" }, new string[] { "=" }, new string[] { myUid });
-                    //Debug.Log(query);
-                    Debug.Log("Friend request has been declined! ");
+                    //string query = mysql.Update("userinfo", "friendrequest", "0", new string[] { "userid" }, new string[] { "=" }, new string[] { myUid });
+                    string query = mysql.Delete("friendrequest", new string[] {"`" + "fromuid" + "`", "`" + "touid" + "`"}, new string[] { "=", "=" }, new string[] { friendRequest.uid.ToString(), myUid });
                     MySqlCommand cmd = new MySqlCommand(query, mysql.mySqlConnection);
                     MySqlDataReader dataReader = cmd.ExecuteReader();
+                    //Debug.Log(query);
+                    //Debug.Log("Friend request has been declined! ");
                     dataReader.Close();
                 }
             }
